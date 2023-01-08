@@ -21,6 +21,7 @@ body {
   font-size: 20px;
   max-width: 1440px;
   text-align: center;
+  margin: 0 auto;
 }
 
 .logo {
@@ -72,6 +73,8 @@ input {
 .error-message {
   display: none;
   color: var(--Light-Red);
+  margin-bottom: 1rem;
+  font-style: italic;
 }
 
 button {
@@ -90,6 +93,7 @@ label {
 }
 
 input {
+  position: relative;
   flex: 1;
 }
 
@@ -130,4 +134,73 @@ footer {
 
 /* Desktop View */
 @media only screen and (min-width: 500px) {
+  body {
+    display: grid;
+    min-height: 100vh;
+  }
+  .logo {
+    height: 1.4375rem;
+    width: 4.8125rem;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 2.7rem;
+
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  /* Email Input & Button */
+
+  button {
+    flex: 1.75;
+  }
+
+  label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2rem auto 0 auto;
+    width: 40%;
+    /* max-height: 40%; */
+  }
+
+  .error-message {
+    display: none;
+    color: var(--Light-Red);
+    font-style: italic;
+  }
+
+  input {
+    flex: 4;
+  }
+
+  /* Illustration */
+  .illustration {
+    margin: 4rem auto 0 auto;
+    width: 40%;
+  }
+
+  /* Social Media Icons */
+  .social-media-icons {
+    gap: 0.75rem;
+    margin: 5rem auto 1.5rem auto;
+  }
+
+  .social-media-icons li {
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.7rem;
+    margin-bottom: 5rem;
+  }
 }
