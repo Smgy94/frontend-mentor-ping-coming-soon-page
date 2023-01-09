@@ -9,7 +9,7 @@
 
 :root {
   --Blue: hsl(223, 87%, 63%);
-  --Pale-Blue: hsl(223, 100%, 88%);
+  --Pale-Blue: hsl(224, 87%, 70%);
   --Light-Red: hsl(354, 100%, 66%);
   --Gray: hsl(0, 0%, 59%);
   --Green: hsl(119, 100%, 26%);
@@ -64,12 +64,18 @@ button {
   border-radius: 5rem;
   padding: 1rem;
   width: 100%;
+  cursor: pointer;
 }
 
 input {
   color: var(--Gray);
   border: 1px solid var(--Pale-Blue);
   padding-left: 2rem;
+}
+
+button:hover {
+  transition: 0.2s ease-in-out;
+  background-color: var(--Pale-Blue);
 }
 
 .error-message {
