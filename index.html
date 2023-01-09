@@ -9,32 +9,39 @@
     <title>Frontend Mentor | Ping coming soon page</title>
   </head>
   <body>
+    <!-- Header -->
     <header>
       <img src="./images/logo.svg" alt="Ping Logo" class="logo" />
       <h1>We are launching <span>soon!</span></h1>
       <p>Subscribe and get notified</p>
     </header>
 
-    <label for="email-input">
-      <input type="email" id="email-input" placeholder="Your email address..." name="email" />
-      <p class="error-message">Please enter a valid email address</p>
-      <button>Notify Me</button>
-    </label>
+    <!-- Email input form -->
+    <div class="cta-wrapper">
+      <label for="email-input">
+        <input type="email" id="email-input" placeholder="Your email address..." name="email" />
+      </label>
+      <p id="text"></p>
+      <button type="submit" id="btn">Notify Me</button>
+    </div>
 
+    <!-- Illustration -->
     <img src="./images/illustration-dashboard.png" alt="" class="illustration" />
 
+    <!-- Social media icons -->
     <ul class="social-media-icons">
       <li>
-        <a href="https://www.facebook.com/"><i class="fa fa-facebook-f"></i></a>
+        <a href="https://www.facebook.com/" aria-label="facebook"><i class="fa fa-facebook-f"></i></a>
       </li>
       <li>
-        <a href="https://twitter.com/ShaneMcGeown94"><i class="fa fa-twitter"></i></a>
+        <a href="https://twitter.com/ShaneMcGeown94" aria-label="twitter"><i class="fa fa-twitter"></i></a>
       </li>
       <li>
-        <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.instagram.com/" aria-label="instagram"><i class="fa fa-instagram"></i></a>
       </li>
     </ul>
 
+    <!-- Footer -->
     <footer>&copy; Copyright Ping. All rights reserved.</footer>
     <script src="./app.js"></script>
   </body>

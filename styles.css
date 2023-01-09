@@ -12,6 +12,7 @@
   --Pale-Blue: hsl(223, 100%, 88%);
   --Light-Red: hsl(354, 100%, 66%);
   --Gray: hsl(0, 0%, 59%);
+  --Green: hsl(119, 100%, 26%);
   --Very-Dark-Blue: hsl(209, 33%, 12%);
 }
 
@@ -60,8 +61,9 @@ footer {
 
 input,
 button {
-  padding: 1rem;
   border-radius: 5rem;
+  padding: 1rem;
+  width: 100%;
 }
 
 input {
@@ -71,10 +73,33 @@ input {
 }
 
 .error-message {
-  display: none;
   color: var(--Light-Red);
   margin-bottom: 1rem;
   font-style: italic;
+}
+
+#email-input:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--Blue);
+  outline-offset: 5px;
+}
+
+.error-border {
+  border: 1px solid var(--Light-Red);
+}
+
+.valid-message {
+  color: var(--Green);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.valid-border {
+  border: 1px solid var(--Green);
+}
+
+#text {
+  font-size: 0.7rem;
 }
 
 button {
@@ -82,9 +107,14 @@ button {
   color: #fff;
   border: none;
   font-weight: 600;
+  flex: 1;
 }
 
 label {
+  flex: 1;
+}
+
+.cta-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,7 +124,6 @@ label {
 
 input {
   position: relative;
-  flex: 1;
 }
 
 /* Illustration */
@@ -129,15 +158,46 @@ a {
 
 /* Footer */
 footer {
-  margin-bottom: 1rem;
+  font-size: 0.7rem;
+  margin-bottom: 3rem;
+}
+
+/* Tablet View */
+@media only screen and (min-width: 501px) {
+  .cta-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2rem auto 0 auto;
+    width: 60%;
+    max-height: 3rem;
+  }
+
+  label {
+    flex: 4;
+  }
+
+  button {
+    flex: 2;
+  }
+
+  .illustration {
+    margin: 4rem auto 0 auto;
+    max-width: 70%;
+  }
+
+  #text {
+    position: absolute;
+    margin-left: 1rem;
+    padding: 1rem 0rem 0rem 1rem;
+    left: 0;
+    top: 80%;
+  }
 }
 
 /* Desktop View */
-@media only screen and (min-width: 500px) {
-  body {
-    display: grid;
-    min-height: 100vh;
-  }
+@media only screen and (min-width: 1025px) {
   .logo {
     height: 1.4375rem;
     width: 4.8125rem;
@@ -156,27 +216,26 @@ footer {
 
   /* Email Input & Button */
 
-  button {
-    flex: 1.75;
-  }
-
-  label {
+  .cta-wrapper {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 2rem auto 0 auto;
     width: 40%;
-    /* max-height: 40%; */
+    max-height: 3rem;
+  }
+
+  button {
+    flex: 0.75;
+  }
+
+  label {
+    flex: 2;
   }
 
   .error-message {
-    display: none;
-    color: var(--Light-Red);
-    font-style: italic;
-  }
-
-  input {
-    flex: 4;
+    margin-bottom: 0rem;
   }
 
   /* Illustration */
@@ -201,6 +260,5 @@ footer {
   /* Footer */
   footer {
     font-size: 0.7rem;
-    margin-bottom: 5rem;
   }
 }

@@ -1,21 +1,27 @@
-function validateEmail(input) {
-  // Regular expression to check if the input is a valid email address
-  const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return emailRegex.test(input.toLowerCase());
-}
+const emailInput = document.querySelector("#email-input");
+const text = document.querySelector("#text");
+const button = document.querySelector("button");
 
-const emailInput = document.querySelector('input[name="email"]');
-const errorMessage = document.querySelector(".error-message");
-const submitButton = document.querySelector("button");
+button.addEventListener("click", () => {
+  const email = emailInput.value;
+  const isValidEmail = isValid(email);
 
-submitButton.addEventListener("click", function (event) {
-  event.preventDefault();
-
-  // Check if the input is a valid email address
-  if (validateEmail(emailInput.value)) {
-    // If it is valid, do something here (e.g. send an email notification)
+  if (isValidEmail) {
+    text.innerText = "Thank you!";
+    text.classList.remove("error-message");
+    text.classList.add("valid-message");
+    emailInput.classList.remove("error-border");
+    emailInput.classList.add("valid-border");
   } else {
-    // If it is not valid, show the error message
-    errorMessage.style.display = "block";
+    text.innerText = "Please enter a valid email address";
+    text.classList.remove("valid-message");
+    text.classList.add("error-message");
+    emailInput.classList.remove("valid-border");
+    emailInput.classList.add("error-border");
   }
 });
+
+function isValid(email) {
+  const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return regex.test(String(email).toLowerCase());
+}
