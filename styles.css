@@ -72,6 +72,11 @@ input {
   padding-left: 2rem;
 }
 
+input,
+select {
+  font-size: 100%;
+}
+
 .error-message {
   color: var(--Light-Red);
   margin-bottom: 1rem;
