@@ -75,6 +75,7 @@ footer {
   justify-content: center;
   gap: 0.5rem;
   width: 100%;
+  margin-top: 2rem;
 }
 
 input,
@@ -113,8 +114,8 @@ button:hover {
 
 #email-input:focus-visible,
 button:focus-visible {
-  outline: 3px solid var(--Blue);
-  outline-offset: 5px;
+  outline: 3px solid black;
+  outline-offset: 2px;
 }
 
 .error-border {
@@ -168,7 +169,6 @@ button {
     display: flex;
     flex-direction: row;
     width: 45%;
-    margin-top: 2rem;
   }
 
   .flex-inner-container {
@@ -183,7 +183,8 @@ button {
 
   #text {
     position: absolute;
-    top: 2.5rem;
+    top: 2rem;
+    margin: 1.5rem 0;
     padding-left: var(--space-m);
   }
 
