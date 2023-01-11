@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./styles.css" />
-    <script src="https://kit.fontawesome.com/f9aefcac71.js" crossorigin="anonymous"></script>
     <title>Frontend Mentor | Ping coming soon page</title>
   </head>
   <body>
@@ -19,10 +19,11 @@
 
       <!-- Email input form -->
       <div class="cta-wrapper">
-        <label for="email-input">
+        <div class="flex-inner-container">
+          <label for="email-input" class="hide">Email address:</label>
           <input type="email" id="email-input" placeholder="Your email address..." name="email" />
-        </label>
-        <p id="text"></p>
+          <p id="text"></p>
+        </div>
         <button type="submit" id="btn">Notify Me</button>
       </div>
 
@@ -32,13 +33,17 @@
       <!-- Social media icons -->
       <ul class="social-media-icons">
         <li>
-          <a href="https://www.facebook.com/" aria-label="facebook"><i class="fa fa-facebook-f"></i></a>
+          <a href="https://www.facebook.com/" target="_blank" aria-label="facebook"><img src="./images/facebook-f.svg" alt="" /></i></a>
+        </li>
+
+
+
+
+        <li>
+          <a href="https://twitter.com/ShaneMcGeown94" target="_blank" aria-label="twitter"> <img src="./images/twitter.svg" alt=""> </a>
         </li>
         <li>
-          <a href="https://twitter.com/ShaneMcGeown94" aria-label="twitter"><i class="fa fa-twitter"></i></a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/" aria-label="instagram"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.instagram.com/" target="_blank" aria-label="instagram"> <img src="./images/instagram.svg" alt=""> </a>
         </li>
       </ul>
 
