@@ -49,18 +49,22 @@
 
 /* Gerneral Syles */
 body {
-  display: flex;
-  align-items: center;
   font-family: "Libre Franklin", sans-serif;
-  text-align: center;
   padding: var(--space-m);
+}
+
+header {
+  text-align: center;
 }
 
 main {
   display: grid;
-  align-items: center;
   justify-items: center;
+  font-family: "Libre Franklin", sans-serif;
+  text-align: center;
+  padding: var(--space-m);
   max-width: 1440px;
+  max-height: 1000px;
   margin: 0 auto;
 }
 
@@ -100,7 +104,6 @@ footer {
   flex-direction: column;
   justify-content: center;
   gap: 0.5rem;
-  margin-top: 2rem;
   width: 100%;
 }
 
@@ -191,16 +194,11 @@ button {
 
 /* Desktop View */
 @media only screen and (min-width: 768px) {
-  main {
-    display: grid;
-    align-items: center;
-    justify-items: center;
-  }
-
   .cta-wrapper {
     display: flex;
     flex-direction: row;
     width: 45%;
+    margin-top: 2rem;
   }
 
   .flex-inner-container {
