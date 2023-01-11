@@ -43,14 +43,9 @@
   --space-3xl: clamp(7.5rem, calc(7.5rem + 0vw), 7.5rem);
 }
 
-/* * {
-  outline: 1px solid red;
-} */
-
 /* Gerneral Syles */
 body {
   font-family: "Libre Franklin", sans-serif;
-  padding: var(--space-m);
 }
 
 header {
@@ -224,5 +219,13 @@ button {
 
   .illustration {
     max-width: 45%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
