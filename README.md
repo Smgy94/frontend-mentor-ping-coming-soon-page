@@ -1,7 +1,7 @@
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/ping-single-column-coming-soon-page-bHvyNMym9O](https://www.frontendmentor.io/solutions/ping-single-column-coming-soon-page-bHvyNMym9O)
-- Live Site URL: [https://smgy94.github.io/frontend-mentor-ping-coming-soon-page/](https://smgy94.github.io/frontend-mentor-ping-coming-soon-page/)
+- Solution URL: [https://github.com/User9511/frontend-mentor-ping-coming-soon-page](https://github.com/User9511/frontend-mentor-ping-coming-soon-page)
+- Live Site URL: [https://user9511.github.io/frontend-mentor-ping-coming-soon-page/](https://user9511.github.io/frontend-mentor-ping-coming-soon-page/)
 
 ## Table of contents
 
